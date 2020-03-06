@@ -1,12 +1,13 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const NavBar = props => {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a className="navbar-brand" href="#">
-          Navbar
-        </a>
+        <NavLink className="navbar-brand" to="/">
+          Movies
+        </NavLink>
         <button
           className="navbar-toggler"
           type="button"
@@ -21,28 +22,23 @@ const NavBar = props => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item active">
-              <a className="nav-link" href="#">
+              <NavLink className="nav-link" to="/">
                 Home <span className="sr-only">(current)</span>
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                Features
-              </a>
+              <NavLink className="nav-link" to="/movies">
+                Movies
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                Pricing
-              </a>
+              <NavLink className="nav-link" to="/login">
+                Login
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a
-                className="nav-link disabled"
-                href="#"
-                tabindex="-1"
-                aria-disabled="true"
-              >
-                Disabled
+              <a className="nav-link" to="#" tabindex="-1">
+                Logout
               </a>
             </li>
           </ul>

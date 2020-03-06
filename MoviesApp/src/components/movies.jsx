@@ -3,6 +3,7 @@ import Movie from "./movie";
 import ListGroup from "./list-group";
 import Pagination from "./pagination";
 import _ from "lodash";
+import { Link } from "react-router-dom";
 
 class Movies extends Component {
   state = {
@@ -117,7 +118,7 @@ class Movies extends Component {
     return (
       <div>
         <div className="row">
-          <div className="col-3">
+          <div className="col-3 ">
             <ListGroup
               genres={genres}
               selectedGenre={this.state.selectedGenre}
@@ -126,7 +127,12 @@ class Movies extends Component {
           </div>
           <div className="col-6">
             {paginatedMovies.map(movie => (
-              <Movie movie={movie} />
+              <Link
+                to={{ pathname: `/movies/${movie._id}`, state: { movie } }}
+                style={{ textDecoration: "none" }}
+              >
+                <Movie movie={movie} />
+              </Link>
             ))}
           </div>
         </div>
