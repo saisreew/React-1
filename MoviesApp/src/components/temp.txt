@@ -1,0 +1,26 @@
+Uncontrolled Vs Controlled Elements
+
+Uncontrolled - Ref - referring dom
+Controlled - state object
+
+Flow: controlled elements  
+  user types in input field
+  callback gets invoked
+  we call setState with the new value
+  component rerenders
+  input field updates its value with state value
+
+  //npm install joi-browser
+firstname;
+lastname;
+email;
+password;
+Register - btn;
+
+
+https://www.npmjs.com/package/joi
+
+
+
+
+
