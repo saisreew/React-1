@@ -44,7 +44,7 @@ const EmpTable = props => {
                     <div className="modal-content">
                       <div className="modal-header">
                         <h5 className="modal-title" id="exampleModalLabel">
-                          Update Employee details
+                          Update Employee Details
                         </h5>
                         <button
                           type="button"
